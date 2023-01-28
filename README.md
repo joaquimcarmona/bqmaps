@@ -29,5 +29,5 @@ Monthly data since Jan 2016 up to Feb 2021 inc.
 
 [**TMS**](https://docs.google.com/presentation/d/1U45_tRHIsJbDhsu8pzeCQqH4ACjtRpnrGGVUxC_jviA/edit?usp=sharing)  
 To view vehicle frequency in each stretch  
-Daily data since Jan 2016 inc.
+Daily data since Jan 2016 up to Feb 2021 inc.
 
