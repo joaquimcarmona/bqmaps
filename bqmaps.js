@@ -57,7 +57,7 @@ function onRequest(request,response){
         console.log("bqmaps " + new Date().toString().substring(0,34) + ".csv");
         const {Storage} = require('@google-cloud/storage');
         const storage = new Storage();
-        const myBucket = storage.bucket('csvsniceripple');
+        const myBucket = storage.bucket('');
         const fileName = "bqmaps " + new Date().toString().substring(0,34) + ".csv"
         const file = myBucket.file(fileName);
         console.log(file.publicUrl());
