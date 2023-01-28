@@ -1,0 +1,51 @@
+.serv button {
+    background-color: magenta;
+    color: white;
+    font-weight: bold;
+}
+.help button {
+    background-color: rgb(128, 248, 128); 
+    color: rgb(5, 5, 5); 
+    font-weight: bold; 
+}
+.action button {
+    background-color: green; 
+    color: white; 
+    font-weight: bold; 
+}
+#map {
+    height: 100%;
+}
+#menu {
+    position: absolute; 
+    background: rgba(255, 255, 255, 0.8); 
+    z-index: 1000; 
+    top: 50px; 
+    left: 10px; 
+    padding: 15px;
+    max-width:375px;
+    font-family: "Arial", serif;
+}
+#menu p {
+    font-size: 0.9em;
+    font-weight:bold;
+}
+#stats h1 {
+    margin: 0 0 10px 0;
+    font-size: 1.75em;
+}
+#stats div {
+    margin: 5px 0px;
+    font-size: 0.9em;
+}
+#stats table {
+    font-size: 0.9em;
+}
+#btn-group button {
+    float: left; /* Float the buttons side by side */
+}
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}

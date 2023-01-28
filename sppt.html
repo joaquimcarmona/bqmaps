@@ -1,0 +1,387 @@
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>bqmaps</title>
+        <meta name="viewport" content="initial-scale=1.0">
+        <link type="text/css" rel="stylesheet" href="https://storage.googleapis.com/bqmaps_public/bqmapssp.css">
+        <script src="https://storage.googleapis.com/bqmaps_public/menu.js"></script>
+        <script src="https://storage.googleapis.com/bqmaps_public/ling.js"></script>
+        <script src="https://storage.googleapis.com/bqmaps_public/ode.js"></script>
+        <script src="https://storage.googleapis.com/bqmaps_public/odePainel.js"></script>
+        <script src="https://storage.googleapis.com/bqmaps_public/odv.js"></script>
+        <script src="https://storage.googleapis.com/bqmaps_public/odvPainel.js"></script>
+        <script src="https://storage.googleapis.com/bqmaps_public/val.js"></script>
+        <script src="https://storage.googleapis.com/bqmaps_public/valPainel.js"></script>
+        <script src="https://storage.googleapis.com/bqmaps_public/cart.js"></script>
+        <script src="https://storage.googleapis.com/bqmaps_public/cartPainel.js"></script>
+        <script src="https://storage.googleapis.com/bqmaps_public/pomp.js"></script>
+        <script src="https://storage.googleapis.com/bqmaps_public/pompPainel.js"></script>
+        <script src="https://storage.googleapis.com/bqmaps_public/tms.js"></script>
+        <script src="https://storage.googleapis.com/bqmaps_public/tmsPainel.js"></script>
+        <script src="https://storage.googleapis.com/bqmaps_public/sp.js"></script>
+        <meta charset="utf-8">
+        <style>.show {display:block;}</style>
+    </head>
+
+    <body style="overflow-Y: hidden;">
+        
+      <table id="Cab" class="cab" style="height: 74px; background-color: green; font-family: arial; z-index: -1" rules=none>
+        <tr style="color: white; background-color: green; border: 3px solid green;
+                    font-family:arial; font-size: 20px">
+           <td width="4%">
+				<div class="dropdown" style="float: left; padding-top: 1px">
+				<img id="myImage" onclick="myFunction()" class="dropbtn" 
+           		src="menu" width="40" height="50" 
+                style="border: none; background-color: rgba(161, 196, 133, 0.01);">
+  				    <div id="myDropdown" class="dropdown-content"
+                    style="font-size: 13px; text-align: left; height: 88vh">
+                        <a style="background-color: rgba(142, 202, 53, 0.938); color: white; font-size: 16px">MP</a>
+   		 			    <a href="http://www.metrodoporto.pt/pages/462">Informação de Gestão Operacional </a>
+    					<a class="clara"href="http://www.metrodoporto.pt/uploads/writer_file/document/58/20130116114152669228.pdf">Documentação da IG Operacional</a>
+                        <a style="background-color: rgba(142, 202, 53, 0.938); color: white; font-size: 16px">Apps</a>
+   		 			    <a href="http://rede-160318.appspot.com/">Procura e oferta por troço, ano, mês, hora</a>
+                        <a href="http://util-171115.appspot.com/">Ibidem, dias úteis apenas</a>
+                        <a style="background-color: rgba(142, 202, 53, 0.938); color: white; font-size: 16px">Slideshows</a>
+   		 			    <a href="https://drive.google.com/drive/folders/1Nywu8C8MsGFMr7jlxo7xvenYXTW7qXu4?usp=sharing">Matrizes OD agrupadas </a>
+                        <a style="background-color: rgba(142, 202, 53, 0.938); color: white; font-size: 16px">Referência</a>
+                        <a href="https://onedrive.live.com/view.aspx?resid=4739DC94C72D0FDD!2634&ithint=file%2cxlsx&authkey=!AJuBGEO1mUTzynY">Números e códigos de estações e zonas Andante </a>
+                        <a href="/gloss">Glossário </a>
+                        <a id="inic" onclick="inicializaGlobal()" style="background-color: magenta; color:white; font-weight: bold;">Início </a>
+   		 		    </div>
+                    <div id="myDropdownEn" class="dropdown-content"
+                    style="font-size: 13px; text-align: left; height: 88vh">
+                        <a style="background-color: rgba(142, 202, 53, 0.938); color: white; font-size: 16px">MP</a>
+                            <a href="http://www.metrodoporto.pt/pages/462">Operational Management Information </a>
+                        <a class="clara"href="http://www.metrodoporto.pt/uploads/writer_file/document/58/20130116114152669228.pdf">Operational MI Documentation</a>
+                        <a style="background-color: rgba(142, 202, 53, 0.938); color: white; font-size: 16px">Apps</a>
+                            <a href="http://rede-160318.appspot.com/">Demand and supply by stretch, year, month, hour</a>
+                        <a href="http://util-171115.appspot.com/">Ibidem, week days only</a>
+                        <a style="background-color: rgba(142, 202, 53, 0.938); color: white; font-size: 16px">Slideshows</a>
+                            <a href="https://drive.google.com/drive/folders/1Nywu8C8MsGFMr7jlxo7xvenYXTW7qXu4?usp=sharing">OD grouped matrices </a>
+                        <a style="background-color: rgba(142, 202, 53, 0.938); color: white; font-size: 16px">Reference</a>
+                        <a href="https://onedrive.live.com/view.aspx?resid=4739DC94C72D0FDD!2634&ithint=file%2cxlsx&authkey=!AJuBGEO1mUTzynY">Station and tariff zone numbers and codes  </a>
+                        <a href="/glossen">Glossary </a>
+                        <a id="inicen" onclick="inicializaGlobal()" style="background-color: magenta; color:white; font-weight: bold;">Start </a>
+                    </div>
+				</div>
+            </td>
+            <td width="3%"></td>
+            <td width="3%">
+                <div id="bqmaps" style="color:rgb(128, 248, 128); text-align: left; padding-left: 60px">
+                    <b> bqmaps: </b>
+                </div>
+            </td>
+            <td width="85%">
+             	<div id="descr" style="color:#ffffff; text-align: left; padding-left: 20px">
+      				<b> Visualização em mapa da procura e oferta no metro do Porto </b>
+      		 	</div>
+            </td>
+            <td width="4%">
+                <div style="float: right; padding-top: 1px">
+                    <button id="ling" class="dropbtn" style="background-color: transparent;"> 
+                        <img id="uk" src="en" width="40" height="40" style="background-color: transparent;" onclick="ling('uk')">
+                        <img id="por" src="por" width="40" height="40" style="background-color: transparent;" onclick="ling('pt')">
+                    </button>
+                </div>
+            </td>
+        </tr>  
+      </table>
+      <div id="opt" class="cab" style="background-color: rgba(161, 196, 133, 0.2); overflow-Y: scroll; margin-top: 88px; height:594px;padding-Right: 10px">
+        <div class="botserv" style="padding: 50px 0px 20px 200px;">
+            <div class="hanging">
+                <button style="padding: 1px 13px;" 
+                    type="button" title="Colorir estações em função do número de etapas"
+                    onclick="odeSP()" id="bode"> OD Et 
+                </button>
+                <b id="bodeDescr">
+                    Para visualizar origens / destinos de etapas 
+                    terminadas / iniciadas em certa estação ou grupo de estações </b>
+            </div>
+            <p id=bodeDatas>
+                Dados mensais desde Jan 2018 a Fev 2021 inc.</p>
+        </div>
+        <div class="botserv" style="padding-left: 200px;">
+            <div class="hanging">
+                <button style="padding: 1px 13px" 
+                    type="button" title="Colorir estações em função do número de viagens"
+                    onclick="odvSP()" id="bodv"> OD Vi 
+                </button>
+                <b id="bodvDescr">
+                    Para visualizar origens / destinos de viagens 
+                    terminadas / iniciadas em certa estação ou grupo de estações </b>
+            </div>
+            <p id="bodvDatas">
+                Dados mensais desde Jan 2018 a Fev 2021 inc.</p>
+        </div>
+        <div class="botserv" style="padding-left: 200px; padding-top: 10px;">
+            <div class="hanging">
+                <button style="padding: 1px 13px" 
+                    type="button" title="Colorir estações em função do número de validações"
+                    onclick="valSP()" id="bval"> Valid 
+                </button>
+                <b id="bvalDescr">
+                    Para visualizar validações por estação </b>
+            </div>
+            <p id="bvalDatas">
+                Dados diários desde Jan 2019 a Fev 2021 inc.</p>
+        </div>
+        <div class="botserv" style="padding-left: 200px; padding-top: 15px;">
+            <div class="hanging">
+                <button style="padding: 1px 13px" 
+                    type="button" title="Colorir estações em função do número de clientes"
+                    onclick="cartSP()" id="bcart"> Cart 
+                </button>
+                <b id="bcartDescr">
+                    Para visualizar número de cartões diferentes usados por estação </b>
+            </div>
+            <p id="bcartDatas">
+                Dados diários desde Set 2020 a Fev 2021 inc.</p>
+        </div>
+        <div class="botserv" style="padding-left: 200px; padding-top: 15px;">
+            <div class="hanging">
+                <button style="padding: 1px 13px;" 
+                    type="button" title="Colorir troços em função da oferta ou procura"
+                    onclick="pompSP()" id=bpomp> PO 
+                </button>
+                <b id="bpompDescr">
+                    Para visualizar passageiros, oferta ou taxa de ocupação por troço </b>
+            </div>
+            <p id="bpompDatas">
+                Dados mensais desde Jan 2016 a Fev 2021 inc.</p>
+        </div>
+        <div class="botserv" style="padding-left: 200px; padding-top: 15px;">
+            <div class="hanging">
+                <button style="padding: 1px 13px;" 
+                    type="button" title="Colorir troços em função da oferta"
+                    onclick="tmsSP()" id="btms"> TMS 
+                </button>
+                <b id="btmsDescr">
+                    Para visualizar número de passagens de veículos por troço </b>
+            </div>
+            <p id=btmsDatas>
+                Dados diários desde Jan 2016 a Fev 2021 inc.</p>
+        </div>
+        <div style="padding-left: 200px;; padding-top: 15px; font-family: Arial; font-size: 16px">
+            <b style="color: magenta" id="ref">
+                >>> Links relevantes no menu hamburguer no topo superior esquerdo <<< </b>
+        </div>
+      </div>
+      <div id="map" style="position: fixed; height: 100%; top: 74px;"></div>
+      <div id="toast"></div>
+      <div id="stats" style="opacity: 1; zoom: 0.8;"</div>
+      
+    </body>
+
+    <script>
+        var serv = '';
+        var lingua = 'pt';
+        dimCab(serv);
+        window.addEventListener('resize', () => dimCab(serv));
+        window.addEventListener('fullscreenchange', () => dimCab(serv));
+        var map;
+        function initMap() {
+            console.log(document.getElementById('map'));
+            map = new google.maps.Map(document.getElementById('map'), {
+            center: {lat: 41.244, lng: -8.75}, // Porto
+            zoom: 11
+            });
+        }
+        var nin, nodesp, nodvsp = 0;
+        var lar, azu, verm, viol, verd, tc, vevi, amar, fer, nfer;
+        var cp, zonas, zonasLat, zonasLong;
+        var painel;
+        var shapes = [];
+        var escuta = false;
+        inicializaGlobal();
+        let e, m;
+        if (!e) { 
+            e = ['FNZ','VNV','CRR','BGM','CPN','RTN','LVD','NVT','NSN','CNT','ANT','CMP','HRM','24A','BLH','TRD',
+                'LPA','CML','CMS','FRC','RMD','VSO','SBC','SHR','VGA','EMR','HPH','PRL','CMM','MTS','BCP','MCD','SMT',
+                'FCP','CST','ESP','CRT','VRD',
+                'PRB','LDD','VPN','MOS','MOC','MOD','MIN','ENA','VAR','ARV','AZR','SCL','VCD','APE','PFR','SBR','PVZ',
+                'FCC','CRE','PIA','ARJ','CUS','PQM','FOR','ZIN','MND','CTM','ISM',
+                'SOV','DJS','JDE','CMG','GTR','JMO','SBT','ALD','FGM','MRQ','CMB','SLG','PUN','IPO','HSJ',
+                'BOT','AER', 'Alt'];
+            m = ['Jan','Fev','Mar','Abr','Mai','Jun','Jul','Ago','Set','Out','Nov','Dez'];
+        }
+        var orde = "origem";
+        let lvar = ['Pax AB', 'Pax BA', 'Pax', 'Passagens ET AB', 'Passagens ET BA',  
+                   'Passagens TT AB', 'Passagens TT BA', 'Lugares AB', 'Lugares BA',
+                   'Tx Ocupação AB', 'Tx Ocupação BA', 'Max Tx Ocupação'];
+        let shortvar = ['PaxAB', 'PaxBA', 'Pax', 'ETAB', 'ETBA', 'TTAB', 'TTBA', 'LugAB', 'LugBA', 'pp AB', 
+                        'pp BA', 'pp max'];
+        let nomevar = ['pAB', 'pBA', 'p', 'eAB', 'eBA', 'tAB', 'tBA', 'lAB', 'lBA', 'oAB', 'oBA', 'maxto'];
+        let fvar = [5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16];
+        let fvarT = [6, 5, 7, 9, 8, 11, 10, 13, 12, 15, 14, 16];
+        var shortv;
+        var nome, nv;
+        var ind;
+        let stationA = ['Fanzeres','Venda Nova','Carreira','Baguim','Campainha','Rio Tinto','Levada','Nau Vitoria',
+                    'Nasoni','Contumil','Estadio do Dragao','Campanha','Heroismo','24 de Agosto','Bolhao',
+                    'Trindade','Lapa','Carolina Michaelis','Casa da Musica','Francos','Ramalde','Viso',
+                    'Sete Bicas','ASra da Hora','Vasco da Gama','Estadio do Mar','Pedro Hispano','Parque de Real',
+                    'C. Matosinhos','Matosinhos Sul','Brito Capelo','Mercado','BSra da Hora','BFonte do Cuco',
+                    'Custoias','Esposade','Crestins','BVerdes','Pedras Rubras','Lidador','Vilar do Pinheiro',
+                    'Modivas Sul','Modivas Centro','Mindelo','Espaco Natureza','Varziela','Arvore','Azurara',
+                    'Santa Clara','Vila do Conde','Alto de Pega','Portas Fronhas','Sao Bras','CSra da Hora',
+                    'CFonte do Cuco','Candido dos Reis','Pias','Araujo','Custio','Parque de Maia','Forum',
+                    'Zona Industrial','Mandim','Castelo da Maia','Santo Ovidio','D. Joao II','Joao de Deus',
+                    'C.M.Gaia','General Torres','Jardim do Morro','Sao Bento','Aliados','DTrindade',
+                    'Faria Guimaraes','Marques','Combatentes','Salgueiros','Polo Universitario','I.P.O.',
+                    'EVerdes','Botica','Modivas Centro','Modivas Norte'];
+        let stationB = ['Venda Nova','Carreira','Baguim','Campainha','Rio Tinto','Levada','Nau Vitoria','Nasoni',
+                    'Contumil','Estadio do Dragao','Campanha','Heroismo','24 de Agosto','Bolhao','Trindade',
+                    'Lapa','Carolina Michaelis','Casa da Musica','Francos','Ramalde','Viso','Sete Bicas',
+                    'ASra da Hora','Vasco da Gama','Estadio do Mar','Pedro Hispano','Parque de Real',
+                    'C. Matosinhos','Matosinhos Sul','Brito Capelo','Mercado','Sr. de Matosinhos',
+                    'BFonte do Cuco','Custoias','Esposade','Crestins','BVerdes','Pedras Rubras','Lidador',
+                    'Vilar do Pinheiro','Modivas Sul','Modivas Centro','Mindelo','Espaco Natureza','Varziela',
+                    'Arvore','Azurara','Santa Clara','Vila do Conde','Alto de Pega','Portas Fronhas','Sao Bras',
+                    'Povoa de Varzim','CFonte do Cuco','Candido dos Reis','Pias','Araujo','Custio','Parque de Maia',
+                    'Forum','Zona Industrial','Mandim','Castelo da Maia','ISMAI','D. Joao II','Joao de Deus',
+                    'C.M.Gaia','General Torres','Jardim do Morro','Sao Bento','Aliados','DTrindade',
+                    'Faria Guimaraes','Marques','Combatentes','Salgueiros','Polo Universitario','I.P.O.',
+                    'Hospital Sao Joao','Botica','Aeroporto','Modivas Norte','Mindelo'];
+        let stationAtms = ['Fânzeres','Venda Nova','Carreira','Baguim','Campainha','Rio Tinto','Levada','Nau Vitoria',
+                      'Nasoni','Contumil','Estádio do Dragão','Campanhã','Heroismo','24 de Agosto','Bolhão',
+                      'Trindade','Lapa','Carolina Michaelis','Casa da Música','Francos','Ramalde','Viso',
+                      'Sete Bicas','Sra da Hora','Vasco da Gama','Estádio do Mar','Pedro Hispano','Parque de Real',
+                      'C. Matosinhos','Matosinhos Sul','Brito Capelo','Mercado','Sra da Hora','Fonte do Cuco',
+                      'Custoias','Esposade','Crestins','Dos Verdes','Pedras Rubras','Lidador','Vilar do Pinheiro',
+                      'Modivas Sul','Modivas Centro','Mindelo','Espaço Natureza','Varziela','Árvore','Azurara',
+                      'Santa Clara','Vila do Conde','Alto da Pêga','Portas Fronhas','S. Bras','Sra da Hora',
+                      'Fonte do Cuco','Cândido dos Reis','Pias','Araújo','Custió','Parque de Maia','Forum',
+                      'Zona Industrial','Mandim','Castêlo da Maia','Santo Ovídio','D.João II','João de Deus',
+                      'C.M.Gaia','General Torres','Jardim do Morro','São Bento','Aliados','Trindade S',
+                      'Faria Guimaraes','Marques','Lima','Salgueiros','Polo Universitario','I.P.O',
+                       'Dos Verdes','Botica','Modivas Centro','Modivas Norte'];
+        let stationBtms = ['Venda Nova','Carreira','Baguim','Campainha','Rio Tinto','Levada','Nau Vitoria','Nasoni',
+                      'Contumil','Estadio do Dragao','Campanha','Heroismo','24 de Agosto','Bolhao','Trindade',
+                      'Lapa','Carolina Michaelis','Casa da Musica','Francos','Ramalde','Viso','Sete Bicas',
+                      'BSra da Hora','Vasco da Gama','Estadio do Mar','Pedro Hispano','Parque de Real',
+                      'C. Matosinhos','Matosinhos Sul','Brito Capelo','Mercado','Sr. de Matosinhos',
+                      'BFonte do Cuco','Custoias','Esposade','Crestins','Dos Verdes','Pedras Rubras','Lidador',
+                      'Vilar do Pinheiro','Modivas Sul','Modivas Centro','Mindelo','Espaco Natureza','Varziela',
+                      'Arvore','Azurara','Santa Clara','Vila do Conde','Alto da Pega','Portas Fronhas','S. Bras',
+                      'Povoa de Varzim','CFonte do Cuco','Candido dos Reis','Pias','Araujo','Custio','Parque de Maia',
+                      'Forum','Zona Industrial','Mandim','Castelo da Maia','ISMAI','D. Joao II','Joao de Deus',
+                      'C.M.Gaia','General Torres','Jardim do Morro','Sao Bento','Aliados','Trindade S',
+                      'Faria Guimaraes','Marques','Combatentes','Salgueiros','Polo Universitario','I.P.O',
+                      'Hospital S. Joao','Botica','Aeroporto','Modivas Norte','Mindelo'];
+        let coords = [[41.17129167,-8.542754167,41.17509444,-8.541888889],
+                      [41.17509444,-8.541888889,41.17983389,-8.543498889],
+                      [41.17983389,-8.543498889,41.18552528,-8.545831389],
+                      [41.18552528,-8.545831389,41.18334417,-8.553842222],
+                      [41.18334417,-8.553842222,41.17935889,-8.560211944],
+                      [41.17935889,-8.560211944,41.17574083,-8.5621725],
+                      [41.17574083,-8.5621725,41.17410444,-8.573465],
+                      [41.17410444,-8.573465,41.17065917,-8.577259722],
+                      [41.17065917,-8.577259722,41.16570139,-8.578657222],
+                      [41.16570139,-8.578657222,41.16080889,-8.581815833],
+                      [41.16080889,-8.581815833,41.15075417,-8.585625833],
+                      [41.15075417,-8.585625833,41.14653778,-8.593006111],
+                      [41.14653778,-8.593006111,41.14875694,-8.598674167],
+                      [41.14875694,-8.598674167,41.14977278,-8.605744167],
+                      [41.14977278,-8.605744167,41.15235167,-8.609205556],
+                      [41.15235167,-8.609205556,41.15708333,-8.616769444],
+                      [41.15708333,-8.616769444,41.15855639,-8.621861667],
+                      [41.15855639,-8.621861667,41.16063417,-8.628673056],
+                      [41.16063417,-8.628673056,41.16550806,-8.636383333],
+                      [41.16550806,-8.636383333,41.17293083,-8.641796944],
+                      [41.17293083,-8.641796944,41.17724083,-8.646523333],
+                      [41.17724083,-8.646523333,41.18240167,-8.6521725],
+                      [41.18240167,-8.6521725,41.18808194,-8.654491667],
+                      [41.18808194,-8.654491667,41.19031222,-8.661041389],
+                      [41.19031222,-8.661041389,41.18575528,-8.661221667],
+                      [41.18575528,-8.661221667,41.18033861,-8.666231389],
+                      [41.18033861,-8.666231389,41.17907972,-8.673576667],
+                      [41.17907972,-8.673576667,41.18066389,-8.681259167],
+                      [41.18066389,-8.681259167,41.1801425,-8.688574722],
+                      [41.1801425,-8.688574722,41.18385639,-8.691455833],
+                      [41.18385639,-8.691455833,41.18747556,-8.693396111],
+                      [41.18747556,-8.693396111,41.18819083,-8.685156389],                      
+                      [41.18808194,-8.654491667,41.19416222,-8.655947778],
+                      [41.19416222,-8.655947778,41.20026861,-8.655576944],
+                      [41.20026861,-8.655576944,41.21603972,-8.654554444],
+                      [41.21603972,-8.654554444,41.23300306,-8.656633611],
+                      [41.23300306,-8.656633611,41.23817278,-8.658279444],
+                      [41.23817278,-8.658279444,41.24635028,-8.661838056],
+                      [41.24635028,-8.661838056,41.25492944,-8.668037778],
+                      [41.25492944,-8.668037778,41.2702725,-8.679536667],
+                      [41.2702725,-8.679536667,41.28523278,-8.693544722],
+                      [41.28523278,-8.693544722,41.29365944,-8.699256667],
+                      [41.29365944,-8.699256667,41.31505944,-8.714194722],
+                      [41.31505944,-8.714194722,41.32118667,-8.718667222],
+                      [41.32118667,-8.718667222,41.33421417,-8.720663333],
+                      [41.33421417,-8.720663333,41.34034778,-8.725530833],
+                      [41.34034778,-8.725530833,41.34595333,-8.7280525],
+                      [41.34595333,-8.7280525,41.35402056,-8.735628611],
+                      [41.35402056,-8.735628611,41.35907333,-8.739838333],
+                      [41.35907333,-8.739838333,41.36436778,-8.744918056],
+                      [41.36436778,-8.744918056,41.36924944,-8.749645556],
+                      [41.36924944,-8.749645556,41.37320694,-8.753803333],
+                      [41.37320694,-8.753803333,41.37772083,-8.758232222],
+                      [41.18808194,-8.654491667,41.19416361,-8.655639167],
+                      [41.19416361,-8.655639167,41.20070028,-8.649742222],
+                      [41.20070028,-8.649742222,41.20822139,-8.647142778],
+                      [41.20822139,-8.647142778,41.21688361,-8.641027778],
+                      [41.21688361,-8.641027778,41.222295,-8.639020833],
+                      [41.222295,-8.639020833,41.22912917,-8.626569722],
+                      [41.22912917,-8.626569722,41.23432694,-8.62395],
+                      [41.23432694,-8.62395,41.24375278,-8.628488333],
+                      [41.24375278,-8.628488333,41.25354972,-8.6283525],
+                      [41.25354972,-8.6283525,41.26272833,-8.617006944],
+                      [41.26272833,-8.617006944,41.26889389,-8.615402222],
+                      [41.11548083,-8.606604722,41.1196425,-8.606206111],
+                      [41.1196425,-8.606206111,41.12607361,-8.605695],
+                      [41.12607361,-8.605695,41.12965528,-8.606154444],
+                      [41.12965528,-8.606154444,41.13393583,-8.607516667],
+                      [41.13393583,-8.607516667,41.13760472,-8.608688889],
+                      [41.13760472,-8.608688889,41.14460167,-8.610744444],
+                      [41.14460167,-8.610744444,41.14852639,-8.610980278],
+                      [41.14852639,-8.610980278,41.15239472,-8.609681111],
+                      [41.15239472,-8.609681111,41.15734889,-8.609215556],
+                      [41.15734889,-8.609215556,41.16112333,-8.604476111],
+                      [41.16112333,-8.604476111,41.16518917,-8.598840556],
+                      [41.16518917,-8.598840556,41.16934083,-8.598661667],
+                      [41.16934083,-8.598661667,41.17465111,-8.603624722],
+                      [41.17465111,-8.603624722,41.18122056,-8.604545278],
+                      [41.18122056,-8.604545278,41.18296306,-8.601195556],
+                      [41.23817278,-8.658279444,41.23753778,-8.665198611],
+                      [41.23753778,-8.665198611,41.23708556,-8.669533333],
+                      [41.29365944,-8.699256667,41.29364556,-8.702061111],
+                      [41.29364556,-8.702061111,41.31505944,-8.714194722]]; 
+        let lvartms = ['Passagens AB', 'Passagens BA'];
+        let shortvartms = ['PassagensAB', 'PassagensBA'];
+        let nomevartms = ['pAB', 'pBA'];
+        var fer = 0;
+        var nfer = 0;
+        var et = 0;
+        var tt = 0;
+        var tratados = new Array(83).fill([0, 0, 0]);
+        const refLim = {
+            "ode": [1000, 500, 200, 100],
+            "odv": [200, 100, 25, 5],
+            "val": [5000, 2000, 500, 100],
+            "cart": [200000, 50000, 10000, 1000],
+            "pomp": [[200000, 100000, 50000, 10000],
+                     [200000, 100000, 50000, 10000],
+                     [200000, 100000, 50000, 10000],
+                     [2500, 1500, 500, 250],
+                     [2500, 1500, 500, 250],
+                     [1500, 750, 250, 100],
+                     [1500, 750, 250, 100],
+                     [750000, 500000, 250000, 100000],
+                     [750000, 500000, 250000, 100000],
+                     [75, 50, 25, 5],
+                     [75, 50, 25, 5],
+                     [75, 50, 25, 5]],
+            "tms": [[500, 250, 100, 50],
+                    [500, 250, 100, 50]]
+        }
+
+    </script>
+
+	<script src="https://maps.googleapis.com/maps/api/js?libraries=visualization,drawing&amp;key=AIzaSyAy9blTcp0rMZFyStb3AHdYsRPRpyVWRa4&callback=initMap"
+    async defer></script>
+    <script src='https://apis.google.com/js/client.js'></script>

@@ -1,0 +1,26 @@
+{
+  "dependencies": {
+    "@google-cloud/bigquery": "^5.10.0",
+    "@google-cloud/storage": "^5.18.0",
+    "formidable": "^2.0.1",
+    "nodemailer": "^6.7.2",
+    "upper-case": "^2.0.2"
+  },
+  "name": "node_tutorial",
+  "description": "node tutorial =============",
+  "version": "1.0.0",
+  "main": "bqmaps.js",
+  "scripts": {
+    "start": "node bqmaps.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jjcccoursera/node_tutorial.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jjcccoursera/node_tutorial/issues"
+  },
+  "homepage": "https://github.com/jjcccoursera/node_tutorial#readme"
+}

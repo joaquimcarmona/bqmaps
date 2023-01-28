@@ -1,0 +1,163 @@
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>bqmaps</title>
+        <style>
+          body {
+              background-color: rgba(161, 196, 133, 0.2)
+          }
+          table, th, td {
+            border-collapse: collapse;
+            text-align: center;
+            background-color: rgba(161, 196, 133, 0.2)
+          }
+          th, td { padding: 5px; }
+          th { color: white; background-color: grey;}
+          tr { color: #3399ff; }
+          tr:nth-child(odd) {background-color: #fff;}
+          tr:nth-child(even) {background-color: #eee;}
+          .dropbtn {
+    		background-color: green;
+    		color: #ffffff;
+    		padding: 10px;
+			font-size: 20px;
+    		font-family: arial;
+    		border: 0px solid green;
+			cursor: pointer;
+		  }
+		  .dropbtn:hover, .dropbtn:focus {
+    		background-color: green;
+    		border: 0px solid green;
+		  }
+          .dropdown {
+   			position: relative;
+    		display: inline-block;
+		  }
+          .dropdown-content {
+    		display: none;
+    		position: absolute;
+    		background-color: #f9f9f9;
+			min-width: 160px;
+    		overflow: auto;
+    		box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+			font-family: arial;
+		  }
+          .dropdown-content a {
+    		color: rgb(28, 116, 28);
+			padding: 12px 16px;
+    		text-decoration: none;
+    		display: block;
+		  }
+          .dropdown a:hover {background-color: #e6f2ff}
+          .show {display:block;}
+        </style>
+        <!-- for FF, Chrome, Opera -->
+			<link rel="icon" type="image/png" href="/resources/favicons/favicon-16x16.png" sizes="16x16">
+			<link rel="icon" type="image/png" href="/resources/favicons/favicon-32x32.png" sizes="32x32">
+
+	    <!-- for IE -->
+		 	<link rel="icon" type="image/x-icon" href="/resources/favicons/favicon.ico" >
+		 	<link rel="shortcut icon" type="image/x-icon" href="/resources/favicons/favicon.ico"/>
+    </head>
+
+    <body> 
+      
+      <table id="Cab" style="width: 100%; font-family: arial">
+        <tr style="color: white; background-color: green; border: 3px solid green;
+                    font-family:arial; font-size: 20px">
+           <td width="4%">
+				<div class="dropdown" style="float: left; padding-top: 1px">
+				<img id="myImage" onclick="myFunction()" class="dropbtn" 
+           		src="menu" width="40" height="50" 
+                style="border: none; background-color: rgba(161, 196, 133, 0.01);">
+  				    <div id="myDropdown" class="dropdown-content"
+                    style="font-size: 14px; text-align: left">
+                        <a style="background-color: rgba(142, 202, 53, 0.938); color: white; font-size: 16px">MP</a>
+                        <a href="http://www.metrodoporto.pt/pages/462">Operational Management Information </a>
+                        <a href="http://www.metrodoporto.pt/uploads/writer_file/document/58/20130116114152669228.pdf">Operational MI Documentation</a>
+                        <a style="background-color: rgba(142, 202, 53, 0.938); color: white; font-size: 16px">Apps</a>
+                        <a href="http://rede-160318.appspot.com/">Demand and supply by stretch, year, month, hour</a>
+                        <a href="http://util-171115.appspot.com/">Ibidem, week days only</a>
+                        <a style="background-color: rgba(142, 202, 53, 0.938); color: white; font-size: 16px">Slideshows</a>
+                        <a href="https://drive.google.com/drive/folders/1Nywu8C8MsGFMr7jlxo7xvenYXTW7qXu4?usp=sharing">OD grouped matrices </a>
+                        <a style="background-color: rgba(142, 202, 53, 0.938); color: white; font-size: 16px">Reference</a>
+                        <a href="https://onedrive.live.com/view.aspx?resid=4739DC94C72D0FDD!2634&ithint=file%2cxlsx&authkey=!AJuBGEO1mUTzynY">Station and tariff zone numbers and codes </a>
+                        <a href="/" style="background-color: magenta; color:white; font-weight: bold;">Start </a>
+   		 		    </div>
+				</div>
+            </td>
+            <td width="3%"></td>
+            <td width="3%">
+                <div style="color:rgb(128, 248, 128); text-align: left; padding-left: 60px">
+                    <b> bqmaps: </b>
+                </div>
+            </td>
+            <td width="89%">
+             	<div style="color:#ffffff; text-align: left; padding-left: 20px">
+      				<b> Visualizing in a map Oporto metro's demand and supply </b>
+      		 	</div>
+           </td>
+        </tr>  
+      </table>
+      <p>  </p>
+      <h1 style="font-weight: bold; margin-left: 200px; margin-top: 20px; width: 60%; color:green; font-family:arial">Glossary</h1>
+      <p>  </p>
+      <div style="margin-left: 200px; margin-top: 20px; width: 60%; color:green; font-family:arial; font-size: 14px; line-height: 1.5">
+        <p style="margin-left: 60px"> 
+          <span style="font-weight: bold" > Trip. </span> 
+          <span style="color:green"> Course started by a validation. </span>
+        </p>
+        <p style="margin-left: 60px"> 
+            <span style="font-weight: bold" > Journey. </span> 
+            <span style="color:green"> ​Sequence of trips started by validations all, but the first one, of which are separated from the next one by less than 70 minutes. </span>
+        </p>
+        <p style="margin-left: 60px"> 
+            <span style="font-weight: bold" > Stretch. </span> 
+            <span style="color:green"> ​Part of the network between two consecutive stations. </span>
+        </p>
+        <p style="margin-left: 60px"> 
+          <span style="font-weight: bold" > ​Passenger-stretch (Pax Stretch). </span> 
+          <span style="color:green"> Measurement unit for demand: when a passenger travels by metro between two consecutive stations, demand increases by one Passenger-stretch. When ten passengers travel in a metro vehicle bewteen two consecutive stations, demand increases by ten Passenger-stretches. </span>
+        </p>
+        <p style="margin-left: 60px"> 
+          <span style="font-weight: bold" > ​Passenger-Km (Pax Km). </span> 
+          <span style="color:green"> Measurement unit for demand: when a passenger travels by metro between two consecutive stations one km apart, demand increases by one Passenger-km. When ten passengers travel in a metro vehcle bewteen two consecutive stations 500 metres apart, demand increases by five Passenger-kms. </span>
+        </p>
+        <p style="margin-left: 60px"> 
+          <span style="font-weight: bold" > ​Vehicle-Km (VKm). </span> 
+          <span style="color:green"> ​Measurement unit for production / supply: when a vehicle in commercial operation travels between two stations one km apart, supply increases by one Vehicle-km. </span>
+        </p>
+        <p style="margin-left: 60px"> 
+          <span style="font-weight: bold" > ​Seat-km (SKm). </span> 
+          <span style="color:green"> Measurement unit for production / supply: when a Eurotram vehicle, whose capacity is for 216 passengers, travels in commercial operation between two consecutive stations one km apart, supply increases by 216 seat-kms. If the vehicle is a Tram-Train, demand increases by 248 seat-kms. When a composition of two Eurotrams in commercial operation travels bewteen two stations one km apart, supply increases by 432 seat-kms. </span>
+        </p> 
+        <p style="margin-left: 60px"> 
+          <span style="font-weight: bold" > Load Factor (LF). </span> 
+          <span style="color:green"> ​​Ratio between passenger-kms and seat-kms in respect of the same space and time. Average percentage of seats taken in that space and time period </span>
+        </p> 
+      </div>
+
+    </body>
+    
+    <script>
+	/* When the user clicks on the button, 
+	toggle between hiding and showing the dropdown content */
+	function myFunction() {
+    	document.getElementById("myDropdown").classList.toggle("show");
+	}
+     
+   // Close the dropdown if the user clicks outside of it
+	window.onclick = function(event) {
+  	  if (!event.target.matches('.dropbtn')) {
+
+    	var dropdowns = document.getElementsByClassName("dropdown-content");
+    	var i;
+    	for (i = 0; i < dropdowns.length; i++) {
+      	var openDropdown = dropdowns[i];
+      	if (openDropdown.classList.contains('show')) {
+        		openDropdown.classList.remove('show');
+      	}
+    	}
+  	  }
+	}
+	</script>
